@@ -4,5 +4,10 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__) , "..")))
 from pydantic import BaseModel, Field
 
 class Answer(BaseModel):
-    answer:str = Field(description="the answer that is needed for the user question")
-    context:str = Field(description="this is the context that the agent used to reply to the user question")
+    answer: str = Field(
+        description="The answer to the user's question based only on the retrieved PDF context."
+    )
+
+    context: str = Field(
+        description="The retrieved PDF context used to answer the question."
+    )
