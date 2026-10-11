@@ -49,8 +49,6 @@ def ask(question : str) -> dict :
         [system_message, human_message]
     )
     
-    # print(type(response))
-    
     return {
         "answer": response.answer,
         "context": response.context,
