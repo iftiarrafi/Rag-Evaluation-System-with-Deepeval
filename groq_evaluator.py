@@ -5,7 +5,7 @@ load_dotenv()
 
 class GroqEvaluator(DeepEvalBaseLLM):
 
-    def __init__(self, model_name="qwen/qwen3.8-27b"):
+    def __init__(self, model_name="openai/gpt-oss-120b"):
         self.model_name = model_name
         self.llm = ChatGroq(
             model=model_name,

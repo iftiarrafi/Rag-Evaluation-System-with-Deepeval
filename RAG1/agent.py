@@ -15,12 +15,13 @@ from langchain_groq import ChatGroq
 
 #qwen/qwen3.8-27b
 # openai/gpt-oss-120b
-llm = ChatGroq(model="qwen/qwen3.8-27b" ,
+llm = ChatGroq(model="openai/gpt-oss-120b" ,
             api_key=os.getenv("GROQ_API_KEY") , 
             temperature=0
 )
 
-structured_llm = llm.with_structured_output(Answer ,method="json_mode")
+#structured_llm = llm.with_structured_output(Answer ,method="json_mode")
+structured_llm = llm.with_structured_output(Answer ,method="function_calling")
 
 def ask(question : str , k=2) -> dict :
     """ Answer the user's question about the pdf"""
