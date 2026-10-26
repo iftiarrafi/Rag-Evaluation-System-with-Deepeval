@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📊 Production-Grade RAG Evaluation System with DeepEval
+# RAG Evaluation System with DeepEval
 
 ### *Automated LLM-as-a-Judge Benchmarking, Hallucination Auditing & Retrieval Ablation Pipeline*
 
